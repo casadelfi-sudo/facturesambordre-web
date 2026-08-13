@@ -191,7 +191,21 @@
   var body = document.body;
   var saved = null;
   try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-  var lang = (saved === 'ca' || saved === 'es') ? saved : 'ca';
+
+  // Mateixa regla que a la portada: la llista sencera de preferències del navegador,
+  // respectant-ne l'ordre, i català per a qualsevol altre idioma.
+  function idiomaDelNavegador() {
+    var llista = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < llista.length; i++) {
+      var l = String(llista[i]).toLowerCase();
+      if (l.indexOf('ca') === 0) { return 'ca'; }
+      if (l.indexOf('es') === 0) { return 'es'; }
+    }
+    return 'ca';
+  }
+
+  // La tria explícita del visitant mana per sobre del navegador.
+  var lang = (saved === 'ca' || saved === 'es') ? saved : idiomaDelNavegador();
 
   function applyLang(l) {
     lang = l;

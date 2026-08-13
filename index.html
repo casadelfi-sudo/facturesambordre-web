@@ -336,7 +336,23 @@
   var body = document.body;
   var saved = null;
   try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-  var lang = (saved === 'ca' || saved === 'es') ? saved : 'ca';
+
+  // Es mira TOTA la llista de preferències del navegador i no només la primera,
+  // respectant-ne l'ordre: qui té el sistema en castellà i el català a continuació
+  // vol el castellà, i qui els té a l'inrevés vol el català. Amb qualsevol altre
+  // idioma s'obre en català, igual que fa el manual.
+  function idiomaDelNavegador() {
+    var llista = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < llista.length; i++) {
+      var l = String(llista[i]).toLowerCase();
+      if (l.indexOf('ca') === 0) { return 'ca'; }
+      if (l.indexOf('es') === 0) { return 'es'; }
+    }
+    return 'ca';
+  }
+
+  // La tria explícita del visitant mana per sobre del navegador.
+  var lang = (saved === 'ca' || saved === 'es') ? saved : idiomaDelNavegador();
 
   function applyLang(l) {
     lang = l;
