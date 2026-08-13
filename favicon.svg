@@ -1,0 +1,20 @@
+<svg viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#137A69"/>
+      <stop offset="100%" stop-color="#0A3F37"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6D073"/>
+      <stop offset="100%" stop-color="#D9A441"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad)"/>
+  <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+  <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+  <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+  <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad)" stroke-width="7"/>
+  <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#F6D073">€</text>
+  <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad)" stroke-width="8.5" stroke-linecap="round"/>
+</svg>

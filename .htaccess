@@ -1,0 +1,43 @@
+# Factures amb Ordre - configuracio del servidor (Apache, allotjament d'IONOS)
+
+# Que el servidor digui que tot es UTF-8. Sense aixo, alguns servidors anuncien
+# ISO-8859-1 i els accents surten trencats encara que el fitxer estigui be.
+AddDefaultCharset UTF-8
+AddType text/html;charset=UTF-8 .html
+AddType image/webp .webp
+AddType image/svg+xml .svg
+
+DirectoryIndex index.html
+
+# ---------------------------------------------------------------------------
+# HTTPS i domini unic.
+# NO ho activis fins que el certificat SSL d'IONOS estigui actiu al panell:
+# si rediriges a https sense certificat, la web queda inaccessible.
+# Per activar-ho: treu el coixinet (#) de les 5 linies de sota.
+# ---------------------------------------------------------------------------
+# RewriteEngine On
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^(.*)$ https://facturesambordre.es/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^www\.facturesambordre\.es$ [NC]
+# RewriteRule ^(.*)$ https://facturesambordre.es/$1 [R=301,L]
+
+# ---------------------------------------------------------------------------
+# Memoria cau del navegador. L'HTML curt, perque un canvi de text es vegi de
+# seguida; les imatges i el CSS llargs, que gairebe no canvien.
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain application/xml image/svg+xml
+</IfModule>
+
+# Que no es pugui llistar el contingut de les carpetes
+Options -Indexes
