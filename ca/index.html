@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factures amb Ordre — Troba els diners que et cobren de més</title>
+<meta name="description" content="L'app que escaneja els teus albarans i factures, detecta preus per sobre del pactat i et fa recuperar els diners que se t'escapen. Per a qualsevol negoci petit amb proveïdors habituals.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://facturesambordre.es/ca/">
+<meta property="og:title" content="Factures amb Ordre — Troba els diners que et cobren de més">
+<meta property="og:description" content="Escaneja albarans i factures, i deixa que l'app vigili els preus dels teus proveïdors per tu.">
+<meta property="og:image" content="https://facturesambordre.es/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ca_ES">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Factures amb Ordre — Troba els diners que et cobren de més">
+<meta name="twitter:description" content="Escaneja albarans i factures, i deixa que l'app vigili els preus dels teus proveïdors per tu.">
+<meta name="twitter:image" content="https://facturesambordre.es/og-image.png">
+
+<!-- Cercadors. El canonical apunta a aquesta mateixa pàgina, mai a l'arrel. -->
+<link rel="canonical" href="https://facturesambordre.es/ca/">
+<link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/">
+<link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/">
+<link rel="alternate" hreflang="x-default" href="https://facturesambordre.es/es/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A3F37">
+
+<!-- Rutes absolutes a posta: les pàgines de sector penjaran de /es/alguna-cosa/ i amb
+     rutes relatives es trencarien en baixar un nivell més. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-lang="ca">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/ca/">
+      <svg class="brand-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#137A69"/>
+            <stop offset="100%" stop-color="#0A3F37"/>
+          </linearGradient>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F6D073"/>
+            <stop offset="100%" stop-color="#D9A441"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#F6D073">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Factures amb Ordre</span>
+    </a>
+    <div class="header-actions">
+      <!-- Ja no és un commutador de JavaScript: cada idioma té la seva URL i això és
+           un enllaç normal, que és el que Google pot seguir. -->
+      <div class="lang-toggle" role="navigation" aria-label="Idioma">
+        <span class="lang-opt is-active" aria-current="page">CA</span><span class="lang-sep">/</span><a class="lang-opt" href="/es/" hreflang="es" lang="es">ES</a>
+      </div>
+      <a class="btn btn-ghost" href="mailto:info@facturesambordre.es">Contacta'ns</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow eyebrow-light">Per a negocis petits amb proveïdors habituals</span>
+      <h1>Troba els diners que et cobren de més.<br>Sense perdre hores repassant albarans.</h1>
+      <p class="hero-sub">Escaneja albarans i factures amb el mòbil, i l'app detecta sola els preus per sobre del pactat, les faltes i les diferències de pes — abans que et costin diners.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:info@facturesambordre.es?subject=Vull%20provar%20Factures%20amb%20Ordre">Vull provar-ho ✨</a>
+        <a class="btn btn-outline" href="/manual.html">Mira com funciona →</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <strong>€/kg · €/l · €/u</strong>
+          <span>preus comparats per unitat real</span>
+        </div>
+        <div>
+          <strong>7-14 s</strong>
+          <span>de lectura per document (OCR)</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-art-glow"></div>
+      <svg class="hero-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#18917D"/>
+            <stop offset="100%" stop-color="#0A3F37"/>
+          </linearGradient>
+          <linearGradient id="goldGrad2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FCE2A0"/>
+            <stop offset="100%" stop-color="#D9A441"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad2)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad2)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#FCE2A0">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad2)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="problema">
+  <div class="wrap">
+    <span class="eyebrow">El problema</span>
+    <h2>Cada setmana hi ha diners que se t'escapen</h2>
+    <p class="lead">Reps albarans i factures de mitja dotzena de proveïdors. Repassar-los a mà — comprovar que el preu és el pactat, que no falta res, que el pes és el correcte — menja hores que no tens. I quan un proveïdor et cobra de més, sovint ni te n'adones. 😕</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="que-fa">
+  <div class="wrap">
+    <span class="eyebrow">Què fa l'app</span>
+    <h2>Sis coses que fa soles perquè tu no les hagis de fer</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📷</div>
+        <h3>Escaneja en segons</h3>
+        <p>Fas una foto de l'albarà o la factura i l'app en treu tota la informació sola, amb OCR. No cal escriure res a mà.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🚨</div>
+        <h3>Detecta preus per sobre del pactat</h3>
+        <p>Compara automàticament el que et cobren amb el que teniu pactat, i t'avisa a l'instant si no coincideix.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🔗</div>
+        <h3>Concilia albarà i factura</h3>
+        <p>Creua els documents perquè no paguis dues vegades la mateixa mercaderia.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">⚖️</div>
+        <h3>Compara preus entre proveïdors</h3>
+        <p>Per €/kg, €/l, €/u — i també per metre i m² — la unitat real, no la caixa.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">✉️</div>
+        <h3>Et fa reclamar el que et deuen</h3>
+        <p>Genera el missatge llest per enviar al proveïdor amb el que ja consta al document: proveïdor, tipus i número de document, data, concepte i import — i a les incidències de pes, el detall de la bàscula. Mai s'inventa cap dada.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📊</div>
+        <h3>Compte de resultats</h3>
+        <p>Venda menys compres menys despeses fixes, mes a mes, sense que un pagament puntual et desquadri res.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="captures">
+  <div class="wrap">
+    <span class="eyebrow">Com es veu</span>
+    <h2>Tres pantalles que ho expliquen millor</h2>
+    <div class="shots">
+      <figure class="shot">
+        <img src="/captura-taulell.webp" width="460" height="960" loading="lazy" decoding="async"
+             alt="Pantalla d'inici de l'app: resultat del mes, a pagar, a recuperar i els accessos del dia a dia">
+        <figcaption>
+          <strong>El mes, d'un cop d'ull</strong>
+          Què has venut, què has gastat i què et queda. I a sota, què has de pagar i què t'han de tornar.
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="/captura-abonaments.webp" width="460" height="960" loading="lazy" decoding="async"
+             alt="Llista d'abonaments pendents amb el motiu, el proveïdor, el número d'albarà i l'import de cadascun">
+        <figcaption>
+          <strong>El que et deuen, amb el motiu</strong>
+          Cada import amb el seu perquè: un sac que no va arribar, un pes per sota de l'albarà, unes caixes retornades.
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="/captura-tarifa.webp" width="460" height="960" loading="lazy" decoding="async"
+             alt="Tarifa d'un proveïdor amb el preu pactat de cada producte i l'últim preu pagat">
+        <figcaption>
+          <strong>El preu pactat i el que t'han cobrat</strong>
+          La tarifa de cada proveïdor al costat de l'últim preu que has pagat de debò. Si no coincideixen, se't diu.
+        </figcaption>
+      </figure>
+    </div>
+    <p class="shots-note">Captures reals de l'app, amb dades d'exemple: els proveïdors i els imports són inventats.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="per-a-qui">
+  <div class="wrap">
+    <span class="eyebrow">Per a qui és</span>
+    <h2>Restaurants, ferreteries, perruqueries, botigues...</h2>
+    <p class="lead">Per a qualsevol negoci petit amb proveïdors habituals. Si reps albarans cada setmana, l'app és per a tu. 🛠️ 🍽️ 💇 🛍️</p>
+  </div>
+</section>
+
+<section class="section" id="dades">
+  <div class="wrap">
+    <span class="eyebrow">Privacitat</span>
+    <h2>On viuen les teves dades</h2>
+    <p class="lead">La base de dades i els documents que escanegis es queden al teu mòbil: no hi ha cap servidor nostre, ni compte, ni núvol on es guardin.</p>
+    <p class="lead note-caveat">⚠️ La imatge del document que escanegis sí que viatja a Azure AI Document Intelligence perquè la pugui llegir — amb el compte propi de cada negoci, no un servidor compartit nostre.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="diferent">
+  <div class="wrap">
+    <span class="eyebrow">La comparativa</span>
+    <h2>Per què no és una eina més</h2>
+    <div class="compare">
+      <div class="compare-row compare-head">
+        <div>Alternativa</div>
+        <div>Per a qui és</div>
+        <div>Per què no encaixa</div>
+      </div>
+      <div class="compare-row">
+        <div data-label="Alternativa">Holded, Quipu, Billin</div>
+        <div data-label="Per a qui és">Facturació i comptabilitat general</div>
+        <div data-label="Per què no encaixa">Pensades per emetre les teves pròpies factures, no per vigilar què et cobren els proveïdors</div>
+      </div>
+      <div class="compare-row">
+        <div data-label="Alternativa">Yurest</div>
+        <div data-label="Per a qui és">Restaurants i bars — també un sol local, amb Yurest Lite</div>
+        <div data-label="Per què no encaixa">És només per a hostaleria: no serveix per a una ferreteria, una perruqueria o una botiga</div>
+      </div>
+      <div class="compare-row">
+        <div data-label="Alternativa">Dijit.app</div>
+        <div data-label="Per a qui és">Empreses amb molt volum de documents</div>
+        <div data-label="Per què no encaixa">Es cobra per volum de documents i s'integra amb un ERP: sobredimensionat per a un negoci sol</div>
+      </div>
+    </div>
+    <p class="compare-footnote">Segons la informació pública de cada eina, agost del 2026.</p>
+  </div>
+</section>
+
+<section class="section cta-final">
+  <div class="cta-blob"></div>
+  <div class="wrap cta-final-inner">
+    <span class="eyebrow eyebrow-light">👋 Parlem-ne</span>
+    <h2 class="cta-h2">Encara en fase de pilot amb els primers negocis</h2>
+    <p class="lead cta-lead">Escriu-nos i et diem si encaixa amb el teu. Sense compromís.</p>
+
+    <!-- ========================================================================
+         FORMULARI DE CONTACTE — PENDENT D'ACTIVAR
+
+         Escrit i llest, però DESACTIVAT a posta: encara no hi ha cap formulari
+         creat a Formspree, i publicar un botó que no envia enlloc és pitjor que
+         el mailto: de sota, que sí que funciona.
+
+         PER ACTIVAR-LO CALEN DUES COSES, LES DUES:
+           1. Crear el formulari a formspree.io apuntant-lo a
+              info@facturesambordre.es i substituir ENDPOINT_PENDENT per l'ID.
+           2. ⚠️ ACTUALITZAR legal.html EL MATEIX DIA. Avui diu literalment que la
+              pàgina «no té formularis, ni analítica, ni recursos carregats de
+              servidors de tercers». Amb Formspree deixa de ser cert: hi ha
+              formulari, es recull un correu i hi ha un tercer (nord-americà, o
+              sigui transferència internacional de dades). És la pàgina legal:
+              no pot quedar dient una cosa que no és.
+
+         En activar-lo, esborrar l'enllaç mailto de sota.
+    ==========================================================================
+    <form action="https://formspree.io/f/ENDPOINT_PENDENT" method="POST" class="form-contacte">
+      <input type="email" name="email" required placeholder="tu@correu.com" aria-label="El teu correu electrònic">
+      <input type="hidden" name="_subject" value="Nova sol·licitud de prova — facturesambordre.es">
+      <input type="hidden" name="_language" value="ca">
+      <button type="submit" class="btn btn-primary">Vull provar-ho ✨</button>
+    </form>
+    -->
+
+    <a class="btn btn-primary" href="mailto:info@facturesambordre.es">info@facturesambordre.es</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Factures amb Ordre</span>
+    <span class="footer-links">
+      <a href="/es/" hreflang="es" lang="es">Castellano</a>
+      <a href="/manual.html">Manual</a>
+      <a href="/legal.html">Avís legal i privacitat</a>
+      <a href="mailto:info@facturesambordre.es">info@facturesambordre.es</a>
+    </span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Factures amb Ordre",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android",
+  "description": "L'app que escaneja els teus albarans i factures, detecta preus per sobre del pactat i et fa recuperar els diners que se t'escapen.",
+  "url": "https://facturesambordre.es/ca/",
+  "inLanguage": "ca"
+}
+</script>
+
+</body>
+</html>

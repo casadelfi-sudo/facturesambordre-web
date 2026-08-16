@@ -59,6 +59,40 @@ body[data-lang="es"] .lang-ca { display: none; }
 .lang-toggle .lang-opt { padding: 2px 4px; border-radius: 6px; color: var(--gray); }
 .lang-toggle .lang-opt.is-active { color: var(--green-dark); background: var(--green-soft); }
 .lang-toggle .lang-sep { color: #C9C4B8; }
+/* A les homes ja no és un botó de JavaScript sinó un enllaç a l'altra URL. */
+.lang-toggle a.lang-opt { text-decoration: none; }
+.lang-toggle a.lang-opt:hover { color: var(--green-dark); }
+
+/*
+  Formulari de contacte. Encara no és viu enlloc (està comentat a /es/ i /ca/ fins que
+  hi hagi l'endpoint de Formspree), però els estils ja hi són perquè activar-lo sigui
+  només descomentar-lo i no una altra tanda de retocs.
+*/
+.form-contacte {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.form-contacte input[type="email"] {
+  flex: 1 1 260px;
+  max-width: 320px;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(255,255,255,0.55);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 15px;
+}
+.form-contacte input[type="email"]::placeholder { color: rgba(255,255,255,0.65); }
+.form-contacte input[type="email"]:focus {
+  outline: none;
+  border-color: var(--gold-light);
+  background: rgba(255,255,255,0.18);
+}
+.form-contacte button { border: none; cursor: pointer; font-family: inherit; }
 
 /* Header */
 .site-header {

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App para controlar albaranes y facturas de proveedores | Factures amb Ordre</title>
+<meta name="description" content="Escanea albaranes y facturas con el móvil. Detecta precios por encima de lo pactado, faltas y diferencias de peso, y calcula lo que puedes reclamar al proveedor.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://facturesambordre.es/es/">
+<meta property="og:title" content="App para controlar albaranes y facturas de proveedores">
+<meta property="og:description" content="Escanea albaranes y facturas con el móvil y descubre lo que te están cobrando de más. Para cualquier negocio pequeño con proveedores habituales.">
+<meta property="og:image" content="https://facturesambordre.es/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="App para controlar albaranes y facturas de proveedores">
+<meta name="twitter:description" content="Escanea albaranes y facturas con el móvil y descubre lo que te están cobrando de más.">
+<meta name="twitter:image" content="https://facturesambordre.es/og-image.png">
+
+<!-- Buscadores. El canonical apunta a esta misma página, nunca a la raíz. -->
+<link rel="canonical" href="https://facturesambordre.es/es/">
+<link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/">
+<link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/">
+<link rel="alternate" hreflang="x-default" href="https://facturesambordre.es/es/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A3F37">
+
+<!-- Rutas absolutas a propósito: las páginas de sector colgarán de /es/algo/ y con
+     rutas relativas se romperían al bajar un nivel más. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-lang="es">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/es/">
+      <svg class="brand-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#137A69"/>
+            <stop offset="100%" stop-color="#0A3F37"/>
+          </linearGradient>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F6D073"/>
+            <stop offset="100%" stop-color="#D9A441"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#F6D073">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Factures amb Ordre</span>
+    </a>
+    <div class="header-actions">
+      <!-- Ya no es un conmutador de JavaScript: cada idioma tiene su URL y esto es
+           un enlace normal, que es lo que Google puede seguir. -->
+      <div class="lang-toggle" role="navigation" aria-label="Idioma">
+        <a class="lang-opt" href="/ca/" hreflang="ca" lang="ca">CA</a><span class="lang-sep">/</span><span class="lang-opt is-active" aria-current="page">ES</span>
+      </div>
+      <a class="btn btn-ghost" href="mailto:info@facturesambordre.es">Contáctanos</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow eyebrow-light">Para negocios pequeños con proveedores habituales</span>
+      <h1>Encuentra el dinero que te cobran de más.<br>Sin perder horas repasando albaranes.</h1>
+      <p class="hero-sub">Escanea albaranes y facturas con el móvil, y la app detecta sola los precios por encima de lo pactado, las faltas y las diferencias de peso — antes de que te cuesten dinero.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:info@facturesambordre.es?subject=Quiero%20probar%20Factures%20amb%20Ordre">Quiero probarlo ✨</a>
+        <a class="btn btn-outline" href="/manual.html">Mira cómo funciona →</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <strong>€/kg · €/l · €/u</strong>
+          <span>precios comparados por unidad real</span>
+        </div>
+        <div>
+          <strong>7-14 s</strong>
+          <span>de lectura por documento (OCR)</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-art-glow"></div>
+      <svg class="hero-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#18917D"/>
+            <stop offset="100%" stop-color="#0A3F37"/>
+          </linearGradient>
+          <linearGradient id="goldGrad2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FCE2A0"/>
+            <stop offset="100%" stop-color="#D9A441"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad2)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad2)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#FCE2A0">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad2)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="problema">
+  <div class="wrap">
+    <span class="eyebrow">El problema</span>
+    <h2>Cada semana hay dinero que se te escapa</h2>
+    <p class="lead">Un precio que subió sin avisar. Una caja que llegó con dos unidades menos. Un peso que no cuadra con el del albarán. Por separado son tres euros y no vale la pena discutir; al cabo del año son cientos, y nadie los reclama porque nadie los ha visto.</p>
+    <p class="lead">El problema nunca ha sido no querer revisarlo. Es que revisar albarán por albarán, a las once de la noche y con la persiana ya bajada, no lo hace nadie.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="que-fa">
+  <div class="wrap">
+    <span class="eyebrow">Qué hace la app</span>
+    <h2>Seis cosas que hace solas para que tú no tengas que hacerlas</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📷</div>
+        <h3>Escanea albaranes y facturas en segundos</h3>
+        <p>Foto al albarán o a la factura y listo. La app lee las líneas, los productos, las cantidades y los precios, y lo guarda todo ordenado por proveedor y por fecha.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🚨</div>
+        <h3>Detecta precios por encima de lo pactado</h3>
+        <p>Le dices una vez qué precio tienes acordado con cada proveedor. A partir de ahí, cada documento que entra se compara solo, y te avisa cuando alguien te cobra de más.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🔗</div>
+        <h3>Concilia albarán y factura</h3>
+        <p>Compara lo que te entregaron con lo que te facturan. Si aparece algo que no llegó, o llegó menos cantidad de la que pone, lo ves antes de pagar.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">⚖️</div>
+        <h3>Compara precios entre proveedores</h3>
+        <p>El mismo producto, en la lista de tres proveedores distintos. Sin hojas de cálculo y sin ir buscando facturas viejas para saber quién te lo dejaba más barato.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">✉️</div>
+        <h3>Te ayuda a reclamar lo que te deben</h3>
+        <p>Te dice cuánto dinero tienes pendiente de recuperar y de qué proveedor, con el documento y la línea concreta. Para reclamar con el papel delante, no de memoria.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📊</div>
+        <h3>Cuenta de resultados</h3>
+        <p>Lo que compras, a quién y en qué se te va el dinero cada mes. Sin meter nada a mano: sale de los mismos documentos que ya has escaneado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="capturas">
+  <div class="wrap">
+    <span class="eyebrow">Cómo se ve</span>
+    <h2>Tres pantallas que lo explican mejor</h2>
+    <div class="shots">
+      <figure class="shot">
+        <img src="/captura-taulell.webp" width="460" height="960" loading="lazy" decoding="async"
+             alt="Panel mensual de Factures amb Ordre con ventas, gastos, resultado y dinero pendiente de recuperar">
+        <figcaption>
+          <strong>El mes, de un vistazo</strong>
+          Qué has vendido, qué has gastado y qué te queda — con lo que tienes pendiente de pagar y lo que tienes pendiente de recuperar.
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="/captura-abonaments.webp" width="460" height="960" loading="lazy" decoding="async"
+             alt="Lista de abonos pendientes por proveedor, con el motivo de cada importe">
+        <figcaption>
+          <strong>Lo que te deben, con el motivo</strong>
+          Cada importe con su porqué: un saco que no llegó, un peso por debajo del albarán, unas cajas devueltas. Para reclamar sabiendo exactamente de qué hablas.
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="/captura-tarifa.webp" width="460" height="960" loading="lazy" decoding="async"
+             alt="Comparación entre la tarifa pactada del proveedor y el último precio pagado">
+        <figcaption>
+          <strong>La tarifa y lo que te han cobrado</strong>
+          La tarifa de cada proveedor al lado del último precio que has pagado de verdad. Cuando no coinciden, lo ves.
+        </figcaption>
+      </figure>
+    </div>
+    <p class="shots-note">Capturas reales de la app, con datos de ejemplo: los proveedores y los importes son inventados.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="para-quien">
+  <div class="wrap">
+    <span class="eyebrow">Para quién es</span>
+    <h2>Restaurantes, ferreterías, peluquerías, tiendas...</h2>
+    <p class="lead">Si recibes mercancía de proveedores habituales, con albaranes que se acumulan en un cajón y facturas que llegan a final de mes, esto es para ti. Da igual el sector: el problema es el mismo en un bar que en una ferretería.</p>
+    <p class="lead">La app nació en la cocina de un restaurante, revisando albaranes de verdad. Por eso está pensada para hacerse en dos minutos entre servicio y servicio, y no para sentarse una tarde a configurarla.</p>
+  </div>
+</section>
+
+<section class="section" id="datos">
+  <div class="wrap">
+    <span class="eyebrow">Privacidad</span>
+    <h2>Dónde viven tus datos</h2>
+    <p class="lead">La base de datos y los documentos que escaneas se quedan en tu móvil. No hay ningún servidor nuestro, ni cuenta, ni nube: nosotros no vemos tus facturas ni sabemos a quién compras.</p>
+    <p class="lead note-caveat">La única excepción es el momento de leer el documento. La imagen que escaneas sí viaja a Azure AI Document Intelligence, que es quien la interpreta — y lo hace con la cuenta propia de cada negocio, no con un servidor compartido nuestro.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="diferente">
+  <div class="wrap">
+    <span class="eyebrow">La comparativa</span>
+    <h2>Por qué no es una herramienta más</h2>
+    <p class="lead">Programas de facturación hay muchos, y son buenos en lo suyo. Holded, Quipu o Billin están pensados para emitir tus propias facturas — para cobrar, no para vigilar lo que te cobran a ti. Es el problema contrario al tuyo.</p>
+    <p class="lead">Yurest sí mira los albaranes, pero solo sirve si eres hostelería. Y Dijit.app cobra por volumen de documentos: le encaja a una cadena, no a un negocio solo.</p>
+    <p class="lead">Aquí solo se hace una cosa: leer lo que te entra de los proveedores y avisarte cuando no cuadra. Nada de módulos, ni de contabilidad, ni de configurar un mes antes de empezar a usarlo.</p>
+    <p class="compare-footnote">Según la información pública de cada herramienta, agosto de 2026.</p>
+  </div>
+</section>
+
+<section class="section cta-final">
+  <div class="cta-blob"></div>
+  <div class="wrap cta-final-inner">
+    <span class="eyebrow eyebrow-light">👋 Hablemos</span>
+    <h2 class="cta-h2">Estamos en piloto con los primeros negocios</h2>
+    <p class="lead cta-lead">Ahora mismo la app está funcionando en negocios reales, con albaranes reales, mientras terminamos de afinarla. Si quieres ser de los primeros en usarla, déjanos tu correo y te escribimos.</p>
+    <p class="lead cta-lead">Sin compromiso y sin tarjeta: durante el piloto no se paga nada.</p>
+
+    <!-- ========================================================================
+         FORMULARIO DE CONTACTO — PENDIENTE DE ACTIVAR
+
+         Está escrito y listo, pero DESACTIVADO a propósito: Formspree todavía no
+         tiene formulario creado y publicar un botón que no envía a ninguna parte
+         es peor que el mailto: de abajo, que sí funciona.
+
+         PARA ACTIVARLO HACEN FALTA DOS COSAS, LAS DOS:
+           1. Crear el formulario en formspree.io apuntándolo a
+              info@facturesambordre.es y sustituir ENDPOINT_PENDENT por el ID.
+           2. ⚠️ ACTUALIZAR legal.html EL MISMO DÍA. Hoy dice literalmente que la
+              página "no tiene formularios, ni analítica, ni recursos cargados de
+              servidores de terceros". Con Formspree deja de ser cierto: hay
+              formulario, se recoge un correo y hay un tercero (estadounidense,
+              o sea transferencia internacional de datos). Es la página legal:
+              no puede quedar diciendo algo que no es.
+
+         Al activarlo, borrar el enlace mailto de debajo.
+    ==========================================================================
+    <form action="https://formspree.io/f/ENDPOINT_PENDENT" method="POST" class="form-contacte">
+      <input type="email" name="email" required placeholder="tu@correo.com" aria-label="Tu correo electrónico">
+      <input type="hidden" name="_subject" value="Nueva solicitud de prueba — facturesambordre.es">
+      <input type="hidden" name="_language" value="es">
+      <button type="submit" class="btn btn-primary">Quiero probarlo ✨</button>
+    </form>
+    -->
+
+    <a class="btn btn-primary" href="mailto:info@facturesambordre.es?subject=Quiero%20probar%20Factures%20amb%20Ordre">info@facturesambordre.es</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Factures amb Ordre</span>
+    <span class="footer-links">
+      <a href="/ca/" hreflang="ca" lang="ca">Català</a>
+      <a href="/manual.html">Manual</a>
+      <a href="/legal.html">Aviso legal y privacidad</a>
+      <a href="mailto:info@facturesambordre.es">info@facturesambordre.es</a>
+    </span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Factures amb Ordre",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android",
+  "description": "Escanea albaranes y facturas con el móvil. Detecta precios por encima de lo pactado, faltas y diferencias de peso, y calcula lo que puedes reclamar al proveedor.",
+  "url": "https://facturesambordre.es/es/",
+  "inLanguage": "es"
+}
+</script>
+
+</body>
+</html>

@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--
+  L'arrel (/) no hi és a posta: és una redirecció per idioma amb noindex, no contingut.
+  Les que s'han d'indexar són /es/ i /ca/.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://facturesambordre.es/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://facturesambordre.es/es/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facturesambordre.es/es/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facturesambordre.es/es/"/>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/manual.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/legal.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
