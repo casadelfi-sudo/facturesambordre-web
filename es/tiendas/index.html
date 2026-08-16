@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control de albaranes y precios de proveedores para tiendas | Factures amb Ordre</title>
+<meta name="description" content="Escanea los albaranes de tus proveedores y comprueba precios, unidades y devoluciones antes de pagar la factura. Para comercios pequeños.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://facturesambordre.es/es/tiendas/">
+<meta property="og:title" content="Control de albaranes y precios de proveedores para tiendas">
+<meta property="og:description" content="Comprueba que lo que te facturan es lo que te entregaron, y que el precio es el que habías pactado. Sin hojas de cálculo.">
+<meta property="og:image" content="https://facturesambordre.es/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Control de albaranes y precios de proveedores para tiendas">
+<meta name="twitter:description" content="Comprueba que lo que te facturan es lo que te entregaron, y que el precio es el que habías pactado. Sin hojas de cálculo.">
+<meta name="twitter:image" content="https://facturesambordre.es/og-image.png">
+
+<!--
+  Canonical a esta misma página, nunca a la home: si apuntara a /es/, le estaríamos
+  diciendo a Google que esta página no vale por sí sola y no la posicionaría jamás.
+  Sin hreflang a propósito: no existe una versión catalana equivalente, y un hreflang
+  hacia una página que no está es peor que no ponerlo.
+-->
+<link rel="canonical" href="https://facturesambordre.es/es/tiendas/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A3F37">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-lang="es">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/es/">
+      <svg class="brand-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#137A69"/>
+            <stop offset="100%" stop-color="#0A3F37"/>
+          </linearGradient>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F6D073"/>
+            <stop offset="100%" stop-color="#D9A441"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#F6D073">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Factures amb Ordre</span>
+    </a>
+    <div class="header-actions">
+      <div class="lang-toggle" role="navigation" aria-label="Idioma">
+        <a class="lang-opt" href="/ca/" hreflang="ca" lang="ca">CA</a><span class="lang-sep">/</span><span class="lang-opt is-active" aria-current="page">ES</span>
+      </div>
+      <a class="btn btn-ghost" href="mailto:info@facturesambordre.es">Contáctanos</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="wrap hero-inner hero-sector">
+    <div class="hero-text">
+      <span class="eyebrow eyebrow-light">Para comercios y tiendas</span>
+      <h1>Control de albaranes y precios de proveedores, para comercios</h1>
+      <p class="hero-sub">Cuando el margen de lo que vendes ya está ajustado, lo que te cobran de más en la compra no se recupera por ningún otro lado.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:info@facturesambordre.es?subject=Quiero%20probar%20Factures%20amb%20Ordre">Quiero probarlo ✨</a>
+        <a class="btn btn-outline" href="/manual.html">Mira cómo funciona →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Lo que se te escapa sin que lo veas</h2>
+    <p class="lead"><strong>Compras por temporada.</strong> Entre una campaña y la siguiente pasan meses, y los precios de la temporada anterior ya no los recuerda nadie. Una subida se acepta sin discutir simplemente porque no hay con qué compararla.</p>
+    <p class="lead"><strong>El precio por caja no es el precio por unidad.</strong> Si el proveedor cambia el formato del pack, el precio unitario cambia con él aunque el importe de la línea parezca el mismo de siempre.</p>
+    <p class="lead"><strong>Las devoluciones se olvidan.</strong> Producto defectuoso, mercancía que se devuelve, material que se cambia. Queda pendiente de abono y, si nadie lo persigue, se queda pendiente para siempre.</p>
+    <p class="lead"><strong>La factura junta varias entregas.</strong> Cuadrar a mano qué albaranes entran en la factura del mes, y si están todos los que deberían, es media tarde de trabajo que nadie tiene.</p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2>Qué hace la app con todo eso</h2>
+    <p class="lead">Cada albarán que recibes lo escaneas con el móvil en el momento de firmarlo. La app lee las líneas, las ordena por proveedor y las guarda con la fecha.</p>
+    <p class="lead">Cuando llega la factura de final de mes, compara: lo que te facturan contra lo que te entregaron de verdad. Si algo no llegó, si el precio no es el pactado o si falta un abono que te debían, aparece en la lista de cosas a reclamar — con el documento concreto.</p>
+    <p class="lead">Y con el tiempo tienes lo que ahora no tiene nadie: el histórico real de lo que has pagado por cada cosa, para negociar la próxima compra con datos en vez de con sensaciones.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Funciona con los papeles que ya tienes</h2>
+    <p class="lead">No hay que pedirle nada al proveedor ni cambiar la forma de trabajar con él. Se escanean los mismos albaranes de papel que ya te deja al entregar.</p>
+  </div>
+</section>
+
+<section class="section cta-final">
+  <div class="cta-blob"></div>
+  <div class="wrap cta-final-inner">
+    <h2 class="cta-h2">Pruébalo con la próxima entrega</h2>
+    <p class="lead cta-lead">Estamos en piloto con los primeros negocios. Si quieres ser de los primeros, déjanos tu correo.</p>
+
+    <!-- ========================================================================
+         FORMULARIO — PENDIENTE DE ACTIVAR, igual que en la home.
+         Hacen falta las dos cosas: el endpoint de Formspree Y actualizar
+         legal.html el mismo día (hoy dice que no hay formularios ni terceros).
+         El campo _sector es lo que permitirá saber qué página trae gente.
+    ==========================================================================
+    <form action="https://formspree.io/f/ENDPOINT_PENDENT" method="POST" class="form-contacte">
+      <input type="email" name="email" required placeholder="tu@correo.com" aria-label="Tu correo electrónico">
+      <input type="hidden" name="_subject" value="Nueva solicitud de prueba — tiendas">
+      <input type="hidden" name="_language" value="es">
+      <input type="hidden" name="_sector" value="tiendas">
+      <button type="submit" class="btn btn-primary">Quiero probarlo ✨</button>
+    </form>
+    -->
+
+    <a class="btn btn-primary" href="mailto:info@facturesambordre.es?subject=Quiero%20probar%20Factures%20amb%20Ordre%20(tiendas)">info@facturesambordre.es</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Factures amb Ordre</span>
+    <span class="footer-links">
+      <a href="/es/">Inicio</a>
+      <a href="/manual.html">Manual</a>
+      <a href="/es/restaurantes/">Restaurantes</a> · <a href="/es/ferreterias/">Ferreterías</a> · <a href="/es/peluquerias/">Peluquerías</a>
+      <a href="/legal.html">Aviso legal</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

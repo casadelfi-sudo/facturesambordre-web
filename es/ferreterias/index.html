@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control de albaranes y tarifas de proveedores para ferreterías | Factures amb Ordre</title>
+<meta name="description" content="Escanea los albaranes de tus proveedores y comprueba que el precio neto que te aplican es el de tu tarifa. Detecta subidas, faltas y material que no llegó.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://facturesambordre.es/es/ferreterias/">
+<meta property="og:title" content="Control de albaranes y tarifas de proveedores para ferreterías">
+<meta property="og:description" content="Cientos de referencias, tarifas con descuentos por familia y precios que cambian sin avisar. La app comprueba albarán por albarán lo que te están cobrando.">
+<meta property="og:image" content="https://facturesambordre.es/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Control de albaranes y tarifas de proveedores para ferreterías">
+<meta name="twitter:description" content="Cientos de referencias, tarifas con descuentos por familia y precios que cambian sin avisar. La app comprueba albarán por albarán lo que te están cobrando.">
+<meta name="twitter:image" content="https://facturesambordre.es/og-image.png">
+
+<!--
+  Canonical a esta misma página, nunca a la home: si apuntara a /es/, le estaríamos
+  diciendo a Google que esta página no vale por sí sola y no la posicionaría jamás.
+  Sin hreflang a propósito: no existe una versión catalana equivalente, y un hreflang
+  hacia una página que no está es peor que no ponerlo.
+-->
+<link rel="canonical" href="https://facturesambordre.es/es/ferreterias/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A3F37">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-lang="es">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/es/">
+      <svg class="brand-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#137A69"/>
+            <stop offset="100%" stop-color="#0A3F37"/>
+          </linearGradient>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F6D073"/>
+            <stop offset="100%" stop-color="#D9A441"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#F6D073">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Factures amb Ordre</span>
+    </a>
+    <div class="header-actions">
+      <div class="lang-toggle" role="navigation" aria-label="Idioma">
+        <a class="lang-opt" href="/ca/" hreflang="ca" lang="ca">CA</a><span class="lang-sep">/</span><span class="lang-opt is-active" aria-current="page">ES</span>
+      </div>
+      <a class="btn btn-ghost" href="mailto:info@facturesambordre.es">Contáctanos</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="wrap hero-inner hero-sector">
+    <div class="hero-text">
+      <span class="eyebrow eyebrow-light">Para ferreterías y suministros</span>
+      <h1>Control de albaranes y tarifas de proveedores, para ferreterías</h1>
+      <p class="hero-sub">En una ferretería el problema no es que te cobren de más una vez: es que tienes cientos de referencias y ninguna manera humana de comprobarlas todas.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:info@facturesambordre.es?subject=Quiero%20probar%20Factures%20amb%20Ordre">Quiero probarlo ✨</a>
+        <a class="btn btn-outline" href="/manual.html">Mira cómo funciona →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Por qué en una ferretería se escapa más dinero que en otros negocios</h2>
+    <p class="lead"><strong>Muchas referencias y de poco importe.</strong> Tornillería, fijaciones, consumibles, herramienta pequeña. Cada línea vale poco, y precisamente por eso nadie la revisa. La suma de todas al cabo del año no vale poco.</p>
+    <p class="lead"><strong>El precio de catálogo no es el precio que pagas.</strong> Trabajas con tarifas y descuentos por familia de producto, y lo que importa es el neto final. Comprobar si el neto que te han aplicado es el que tenías acordado, línea por línea, es un trabajo de despacho que no hace nadie.</p>
+    <p class="lead"><strong>Las condiciones cambian y no siempre te enteras.</strong> Un descuento que baja, una familia que cambia de tarifa, una promoción que se acaba. El cambio llega en el albarán, no en un aviso.</p>
+    <p class="lead"><strong>Los pedidos llegan a plazos.</strong> Lo que no había se sirve más tarde, o no se sirve. Cuando la factura junta varias entregas, comprobar que está todo lo que pagas deja de ser trivial.</p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2>Qué hace la app con todo eso</h2>
+    <p class="lead">Escaneas el albarán con el móvil y la app lee cada línea: referencia, cantidad y precio. Lo compara con la tarifa que le has dicho una vez que tienes con ese proveedor, y te avisa de lo que no cuadra — una subida que no habías pactado, una cantidad que no llegó, una línea que aparece facturada dos veces.</p>
+    <p class="lead">Cuando llega la factura de final de mes, ya tienes la lista de lo que te tienen que abonar, con el albarán y la línea concreta para poder enseñarla.</p>
+    <p class="lead">Y como todo queda guardado, puedes ver el mismo artículo en la tarifa de varios proveedores y saber quién te lo dejaba mejor — con el precio que has pagado de verdad, no con el del catálogo.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Sin dar de alta el catálogo entero</h2>
+    <p class="lead">No hay que meter miles de referencias antes de empezar. La app va aprendiendo de los albaranes que escaneas: los productos que compras habitualmente aparecen solos, y son esos los que interesa vigilar.</p>
+  </div>
+</section>
+
+<section class="section cta-final">
+  <div class="cta-blob"></div>
+  <div class="wrap cta-final-inner">
+    <h2 class="cta-h2">Pruébalo con los albaranes de esta semana</h2>
+    <p class="lead cta-lead">Estamos en piloto con los primeros negocios. Si quieres ser de los primeros en usarla, déjanos tu correo.</p>
+
+    <!-- ========================================================================
+         FORMULARIO — PENDIENTE DE ACTIVAR, igual que en la home.
+         Hacen falta las dos cosas: el endpoint de Formspree Y actualizar
+         legal.html el mismo día (hoy dice que no hay formularios ni terceros).
+         El campo _sector es lo que permitirá saber qué página trae gente.
+    ==========================================================================
+    <form action="https://formspree.io/f/ENDPOINT_PENDENT" method="POST" class="form-contacte">
+      <input type="email" name="email" required placeholder="tu@correo.com" aria-label="Tu correo electrónico">
+      <input type="hidden" name="_subject" value="Nueva solicitud de prueba — ferreterias">
+      <input type="hidden" name="_language" value="es">
+      <input type="hidden" name="_sector" value="ferreterias">
+      <button type="submit" class="btn btn-primary">Quiero probarlo ✨</button>
+    </form>
+    -->
+
+    <a class="btn btn-primary" href="mailto:info@facturesambordre.es?subject=Quiero%20probar%20Factures%20amb%20Ordre%20(ferreterias)">info@facturesambordre.es</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Factures amb Ordre</span>
+    <span class="footer-links">
+      <a href="/es/">Inicio</a>
+      <a href="/manual.html">Manual</a>
+      <a href="/es/restaurantes/">Restaurantes</a> · <a href="/es/peluquerias/">Peluquerías</a> · <a href="/es/tiendas/">Tiendas</a>
+      <a href="/legal.html">Aviso legal</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

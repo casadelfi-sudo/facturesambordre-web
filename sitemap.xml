@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   L'arrel (/) no hi és a posta: és una redirecció per idioma amb noindex, no contingut.
-  Les que s'han d'indexar són /es/ i /ca/.
+  Les pàgines de sector no porten hreflang perquè no en tenen equivalent en català.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -22,6 +22,30 @@
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/restaurantes/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/ferreterias/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/peluquerias/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/tiendas/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/manual.html</loc>
