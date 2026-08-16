@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" data-idioma="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo funciona por dentro — la tecnología de Factures amb Ordre | Factures amb Ordre</title>
+<meta name="description" content="Qué hay debajo de la app: cómo se leen los documentos, dónde se guardan los datos y qué servicios se usan.">
+<link rel="canonical" href="https://facturesambordre.es/es/manual/como-funciona-por-dentro/">
+<!--
+  Aqui SI que hi ha hreflang: aquesta pagina existeix en catala i en castella.
+-->
+<link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/como-funciona-por-dentro/">
+<link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/com-funciona-per-dins/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A3F37">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://facturesambordre.es/es/manual/como-funciona-por-dentro/">
+<meta property="og:title" content="Cómo funciona por dentro — la tecnología de Factures amb Ordre">
+<meta property="og:description" content="Qué hay debajo de la app: cómo se leen los documentos, dónde se guardan los datos y qué servicios se usan.">
+<meta property="og:image" content="https://facturesambordre.es/og-image.png">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/manual.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/es/">
+      <svg class="brand-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#137A69"/>
+            <stop offset="100%" stop-color="#0A3F37"/>
+          </linearGradient>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F6D073"/>
+            <stop offset="100%" stop-color="#D9A441"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#F6D073">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Factures amb Ordre</span>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="/es/manual/">Índice del manual</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap manual-pagina">
+  <nav class="engrunes" aria-label="Miga de pan">
+    <a href="/es/">Inicio</a> › <a href="/es/manual/">Manual</a> › <span>Cómo funciona por dentro — la tecnología de Factures amb Ordre</span>
+  </nav>
+
+  <h1>Cómo funciona por dentro — la tecnología de Factures amb Ordre</h1>
+  <p class="lead">Qué hay debajo de la app: cómo se leen los documentos, dónde se guardan los datos y qué servicios se usan.</p>
+
+  <section class="bloc">
+<section class="bloc" id="requisits">
+      
+      <h2 class="es">Cómo funciona por dentro</h2>
+      
+      <p class="bloc-intro es">
+        Por si quieres saber qué hay detrás antes de meter ahí las facturas del negocio.
+      </p>
+
+      <div class="taula-fora">
+        
+        <table class="es">
+          <tbody>
+            <tr>
+              <th style="width: 34%">Dónde viven los datos</th>
+              <td>En el teléfono, en una base de datos local. No hay ningún servidor de por
+                medio ni ninguna cuenta que haya que abrir. Si cambias de móvil, los mueves
+                con la copia de seguridad.</td>
+            </tr>
+            <tr>
+              <th>Qué sale del teléfono</th>
+              <td>Solo la imagen del documento que envías a leer al servicio de
+                reconocimiento, y los nombres de los productos cuando pides clasificarlos por
+                categorías. Nada más.</td>
+            </tr>
+            <tr>
+              <th>Lectura de documentos</th>
+              <td>Azure AI Document Intelligence, con tres modelos según qué lee: facturas y
+                albaranes, tablas para las tarifas, y tickets de compra.</td>
+            </tr>
+            <tr>
+              <th>Qué cuesta leerlos</th>
+              <td>
+                El precio de lista de Microsoft para Europa Oeste es de <strong>8,78 € por
+                cada 1.000 páginas</strong> —tanto para las facturas y los tickets como para
+                las tarifas—, es decir <strong>menos de un céntimo por página</strong> (0,88).
+                Un restaurante que introduzca 150 documentos al mes, la mayoría de una sola
+                página, paga <strong>poco más de un euro</strong>.
+                <br><br>
+                Hay un <strong>nivel gratuito de 500 páginas al mes</strong>, que para un
+                negocio pequeño puede sobrar. Tiene una limitación a tener en cuenta: solo
+                lee las <strong>dos primeras páginas</strong> de cada documento, y la factura
+                mensual de un proveedor grande suele tener más.
+                <br><br>
+                <em>Precios consultados en julio de 2026 en la lista pública de Azure para la
+                región Europa Oeste. Conviene comprobarlos en la calculadora de Azure, que los
+                da según el país y el contrato.</em>
+              </td>
+            </tr>
+            <tr>
+              <th>Duplicados y categorías</th>
+              <td>Los duplicados se detectan <strong>en el teléfono, sin internet</strong>.
+                Las categorías se ponen por palabras clave; la reclasificación en bloque de
+                los que quedan en «Otros» es el único paso que usa inteligencia
+                artificial.</td>
+            </tr>
+            <tr>
+              <th>Teléfono</th>
+              <td>Android 7.0 o superior. Ningún requisito especial de cámara.</td>
+            </tr>
+            <tr>
+              <th>Idioma</th>
+              <td>Interfaz en catalán. Lee documentos en catalán y castellano.</td>
+            </tr>
+            <tr>
+              <th>Fiabilidad</th>
+              <td>314 pruebas automáticas sobre los cálculos que pueden hacer perder dinero:
+                pesadas, importes, prorrateo, trimestres, lectura de tarifas. Las
+                actualizaciones <strong>nunca</strong> borran datos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+  </section>
+
+  <nav class="manual-nav">
+    <a class="manual-nav-anterior" href="/es/manual/configuracion/">← Configuración de Factures amb Ordre</a>
+    <a class="manual-nav-index" href="/es/manual/">Índice del manual</a>
+    <span class="manual-nav-buit"></span>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Factures amb Ordre</span>
+    <span class="footer-links">
+      <a href="/es/">Inicio</a>
+      <a href="/es/manual/">Manual</a>
+      <a href="/legal.html">Aviso legal</a>
+      <a href="mailto:info@facturesambordre.es">info@facturesambordre.es</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

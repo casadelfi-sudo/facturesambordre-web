@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   L'arrel (/) no hi es: es una redireccio per idioma amb noindex.
-  manual.html tampoc: te noindex mentre nomes hi hagi 5 de les 11 seccions
-  castellanes passades a pagina propia.
-  Els hreflang nomes hi son a les parelles que existeixen de deb0 als dos idiomes.
+  manual.html tampoc: ara que les 11 seccions son pagina propia als dos idiomes,
+  el manual d'una sola peca nomes en repetiria el text sencer i els competiria.
+  Els hreflang hi son a totes les parelles: les 11 seccions existeixen als dos idiomes.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -75,12 +75,16 @@
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/proveidors-i-productes/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/proveidors-i-productes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/proveedores-y-productos/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/rebre-la-comanda/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/rebre-la-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/pesar-el-genero-fresco/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -119,24 +123,32 @@
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/compte-de-resultats/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/compte-de-resultats/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/cuenta-de-resultados/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/copies-de-seguretat/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/copies-de-seguretat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/copias-de-seguridad/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/configuracio/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/configuracio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/configuracion/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/com-funciona-per-dins/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/com-funciona-per-dins/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/como-funciona-por-dentro/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -145,6 +157,22 @@
     <loc>https://facturesambordre.es/es/manual/escanear-albaranes-facturas/</loc>
     <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/escanejar-albarans-factures/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/escanear-albaranes-facturas/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/proveedores-y-productos/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/proveidors-i-productes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/proveedores-y-productos/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/pesar-el-genero-fresco/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/rebre-la-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/pesar-el-genero-fresco/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -177,6 +205,38 @@
     <loc>https://facturesambordre.es/es/manual/conciliar-albaranes-factura/</loc>
     <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/conciliar-albarans-factura/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/conciliar-albaranes-factura/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/cuenta-de-resultados/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/compte-de-resultats/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/cuenta-de-resultados/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/copias-de-seguridad/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/copies-de-seguretat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/copias-de-seguridad/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/configuracion/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/configuracio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/configuracion/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/como-funciona-por-dentro/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/com-funciona-per-dins/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/como-funciona-por-dentro/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
