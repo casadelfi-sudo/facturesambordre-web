@@ -339,6 +339,58 @@ h2 a:hover { border-bottom-color: var(--green); }
 /* Nota amb matís (secció de privacitat) */
 .note-caveat { color: var(--gray); font-size: 16px; }
 
+/* ---------------------------------------------------------------------------
+   Pàgines del manual. El manual porta el seu propi CSS (manual.css, heretat de
+   quan era un sol fitxer); això és només l'embolcall: molla de pa, índex i la
+   navegació entre pàgines.
+   --------------------------------------------------------------------------- */
+.manual-pagina { padding: 32px 24px 72px; }
+.manual-pagina h1 { font-size: clamp(26px, 3.6vw, 36px); margin-bottom: 12px; }
+.manual-pagina > .lead { margin-bottom: 32px; }
+
+.engrunes { font-size: 14px; color: var(--gray); margin-bottom: 20px; }
+.engrunes a { color: var(--green); text-decoration: none; }
+.engrunes a:hover { text-decoration: underline; }
+
+.manual-grup { margin-top: 40px; }
+.manual-grup h2 { margin-bottom: 8px; }
+.manual-grup .lead { font-size: 16px; margin-bottom: 16px; }
+
+.manual-index { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.manual-index li {
+  background: var(--white);
+  border: 1px solid #E7E4DD;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.manual-index li a { color: var(--green-dark); text-decoration: none; font-size: 17px; }
+.manual-index li a:hover { color: var(--green); }
+.manual-index li span { display: block; color: var(--gray); font-size: 14.5px; margin-top: 4px; }
+
+/* Anterior / índex / següent, al final de cada pàgina del manual. */
+.manual-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #E7E4DD;
+  font-size: 15px;
+}
+.manual-nav a { color: var(--green); text-decoration: none; }
+.manual-nav a:hover { text-decoration: underline; }
+.manual-nav-index { font-weight: 600; }
+.manual-nav-buit { flex: 1; }
+.manual-nav-anterior, .manual-nav-seguent { flex: 1; max-width: 44%; }
+.manual-nav-seguent { text-align: right; }
+
+@media (max-width: 640px) {
+  .manual-nav { flex-direction: column; align-items: stretch; text-align: center; }
+  .manual-nav-anterior, .manual-nav-seguent { max-width: none; text-align: center; }
+}
+
 /* Pàgina legal */
 .legal h1 { font-size: clamp(26px, 3.4vw, 34px); }
 .legal h2 { font-size: 20px; margin-top: 38px; }

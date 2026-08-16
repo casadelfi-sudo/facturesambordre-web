@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ca" data-idioma="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Com funciona per dins — la tecnologia de Factures amb Ordre | Factures amb Ordre</title>
+<meta name="description" content="Què hi ha sota l'app: com es llegeixen els documents, on es desen les dades i quins serveis es fan servir.">
+<link rel="canonical" href="https://facturesambordre.es/ca/manual/com-funciona-per-dins/">
+<!--
+  Sense hreflang a posta: la versio castellana d'aquesta pagina encara no existeix,
+  i un hreflang cap a una URL que no hi es fa mes mal que be.
+-->
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A3F37">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://facturesambordre.es/ca/manual/com-funciona-per-dins/">
+<meta property="og:title" content="Com funciona per dins — la tecnologia de Factures amb Ordre">
+<meta property="og:description" content="Què hi ha sota l'app: com es llegeixen els documents, on es desen les dades i quins serveis es fan servir.">
+<meta property="og:image" content="https://facturesambordre.es/og-image.png">
+<meta property="og:locale" content="ca_ES">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/manual.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/ca/">
+      <svg class="brand-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#137A69"/><stop offset="100%" stop-color="#0A3F37"/></linearGradient>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F6D073"/><stop offset="100%" stop-color="#D9A441"/></linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#F6D073">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Factures amb Ordre</span>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="/ca/manual/">Índex del manual</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap manual-pagina">
+  <nav class="engrunes" aria-label="Molla de pa">
+    <a href="/ca/">Inici</a> › <a href="/ca/manual/">Manual</a> › <span>Com funciona per dins — la tecnologia de Factures amb Ordre</span>
+  </nav>
+
+  <h1>Com funciona per dins — la tecnologia de Factures amb Ordre</h1>
+  <p class="lead">Què hi ha sota l'app: com es llegeixen els documents, on es desen les dades i quins serveis es fan servir.</p>
+
+  <section class="bloc">
+<section class="bloc" id="requisits">
+      <h2 class="ca">Com funciona per dins</h2>
+      
+      <p class="bloc-intro ca">
+        Per si vols saber què hi ha darrere abans de posar-hi les factures del negoci.
+      </p>
+
+      <div class="taula-fora">
+        <table class="ca">
+          <tbody>
+            <tr>
+              <th style="width: 34%">On viuen les dades</th>
+              <td>Al telèfon, en una base de dades local. No hi ha cap servidor pel mig ni
+                cap compte que calgui obrir. Si canvies de mòbil, les mous amb la còpia de
+                seguretat.</td>
+            </tr>
+            <tr>
+              <th>Què surt del telèfon</th>
+              <td>Només la imatge del document que envies a llegir al servei de
+                reconeixement, i els noms dels productes quan demanes classificar-los per
+                categories. Res més.</td>
+            </tr>
+            <tr>
+              <th>Lectura de documents</th>
+              <td>Azure AI Document Intelligence, amb tres models segons què llegeix:
+                factures i albarans, taules per a les tarifes, i tiquets de compra.</td>
+            </tr>
+            <tr>
+              <th>Què costa llegir-los</th>
+              <td>
+                El preu de llista de Microsoft per a Europa Oest és de <strong>8,78 € per
+                cada 1.000 pàgines</strong> —tant per a les factures i els tiquets com per a
+                les tarifes—, o sigui <strong>menys d'un cèntim per pàgina</strong> (0,88).
+                Un restaurant que entri 150 documents el mes, la majoria d'una sola pàgina,
+                paga <strong>poc més d'un euro</strong>.
+                <br><br>
+                Hi ha un <strong>nivell gratuït de 500 pàgines al mes</strong>, que per a un
+                negoci petit pot ser de sobres. Té una limitació a tenir en compte: només
+                llegeix les <strong>dues primeres pàgines</strong> de cada document, i la
+                factura mensual d'un proveïdor gros sol tenir-ne més.
+                <br><br>
+                <em>Preus consultats el juliol del 2026 a la llista pública d'Azure per a la
+                regió Europa Oest. Val la pena comprovar-los al calculador d'Azure, que els
+                dona segons el país i el contracte.</em>
+              </td>
+            </tr>
+            <tr>
+              <th>Duplicats i categories</th>
+              <td>Els duplicats es detecten <strong>al telèfon, sense internet</strong>. Les
+                categories es posen per paraules clau; la reclassificació en bloc dels que
+                queden a «Altres» és l'únic pas que fa servir intel·ligència artificial.</td>
+            </tr>
+            <tr>
+              <th>Telèfon</th>
+              <td>Android 7.0 o superior. Cap requisit especial de càmera.</td>
+            </tr>
+            <tr>
+              <th>Idioma</th>
+              <td>Interfície en català. Llegeix documents en català i castellà.</td>
+            </tr>
+            <tr>
+              <th>Fiabilitat</th>
+              <td>314 proves automàtiques sobre els càlculs que poden fer perdre diners:
+                pesades, imports, prorrateig, trimestres, lectura de tarifes. Les
+                actualitzacions <strong>mai</strong> esborren dades.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    
+  </section>
+
+  <nav class="manual-nav">
+    <a class="manual-nav-anterior" href="/ca/manual/configuracio/">← Configuració de Factures amb Ordre</a>
+    <a class="manual-nav-index" href="/ca/manual/">Índex del manual</a>
+    <span class="manual-nav-buit"></span>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Factures amb Ordre</span>
+    <span class="footer-links">
+      <a href="/ca/">Inici</a>
+      <a href="/ca/manual/">Manual</a>
+      <a href="/legal.html">Avís legal</a>
+      <a href="mailto:info@facturesambordre.es">info@facturesambordre.es</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

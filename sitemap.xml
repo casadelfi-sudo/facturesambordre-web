@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  L'arrel (/) no hi és a posta: és una redirecció per idioma amb noindex, no contingut.
-  Les pàgines de sector no porten hreflang perquè no en tenen equivalent en català.
+  L'arrel (/) no hi es a posta: es una redireccio per idioma amb noindex.
+  manual.html tampoc: te noindex des que el seu text catala viu partit a
+  /ca/manual/. Hi tornara quan existeixi /es/manual/ i es pugui redirigir.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -48,7 +49,73 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://facturesambordre.es/manual.html</loc>
+    <loc>https://facturesambordre.es/ca/manual/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/escanejar-albarans-factures/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/proveidors-i-productes/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/rebre-la-comanda/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/reclamar-abonaments-proveidors/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/tarifes-i-alertes-de-preu/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/comparar-preus-proveidors/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/conciliar-albarans-factura/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/compte-de-resultats/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/copies-de-seguretat/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/configuracio/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/ca/manual/com-funciona-per-dins/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -1,0 +1,490 @@
+/*
+  Estils del manual. Sortien de dins del manual.html d'una sola peca:
+  amb 11 pagines, tenir-los en un fitxer vol dir que el navegador se'ls
+  guarda un cop i no els torna a baixar a cada pagina.
+*/
+
+  /* ============================================================
+     Paleta heretada de l'app (Material 3, values/colors.xml):
+     el manual és del mateix món visual que el producte.
+     ============================================================ */
+  :root {
+    --blau:        #1976D2;
+    --blau-fosc:   #0B4C8C;
+    --tinta:       #001C39;
+    --tinta-suau:  #43474E;
+    --paper:       #FCFCFF;
+    --paper-2:     #F2F3F9;
+    --paper-3:     #ECEEF4;
+    --linia:       #C3C7CF;
+    --linia-suau:  #DFE2EB;
+
+    /* Semàntics: independents de l'accent */
+    --ok:          #2E7D32;
+    --avis:        #8B5000;
+    --error:       #BA1A1A;
+
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Consolas, monospace;
+
+    --max: 1180px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --blau:       #A5C8FF;
+      --blau-fosc:  #D4E3FF;
+      --tinta:      #E3E2E6;
+      --tinta-suau: #C3C7CF;
+      --paper:      #1A1C1E;
+      --paper-2:    #212429;
+      --paper-3:    #282C31;
+      --linia:      #43474E;
+      --linia-suau: #35393E;
+      --ok:         #7FD68A;
+      --avis:       #F2BE6A;
+      --error:      #FFB4AB;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --blau:       #A5C8FF;
+    --blau-fosc:  #D4E3FF;
+    --tinta:      #E3E2E6;
+    --tinta-suau: #C3C7CF;
+    --paper:      #1A1C1E;
+    --paper-2:    #212429;
+    --paper-3:    #282C31;
+    --linia:      #43474E;
+    --linia-suau: #35393E;
+    --ok:         #7FD68A;
+    --avis:       #F2BE6A;
+    --error:      #FFB4AB;
+  }
+
+  :root[data-theme="light"] {
+    --blau:       #1976D2;
+    --blau-fosc:  #0B4C8C;
+    --tinta:      #001C39;
+    --tinta-suau: #43474E;
+    --paper:      #FCFCFF;
+    --paper-2:    #F2F3F9;
+    --paper-3:    #ECEEF4;
+    --linia:      #C3C7CF;
+    --linia-suau: #DFE2EB;
+    --ok:         #2E7D32;
+    --avis:       #8B5000;
+    --error:      #BA1A1A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--tinta-suau);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- Selector d'idioma ---------- */
+
+  .idioma {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.15rem;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0.9rem clamp(1.25rem, 4vw, 3rem) 0;
+  }
+  .idioma button {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid var(--linia);
+    color: var(--tinta-suau);
+    padding: 0.28rem 0.6rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .idioma button + button { border-left-width: 1px; }
+  .idioma button[aria-pressed="true"] {
+    background: var(--blau);
+    border-color: var(--blau);
+    color: var(--paper);
+  }
+  .idioma button:focus-visible { outline: 2px solid var(--blau); outline-offset: 2px; }
+
+  /* Un idioma a la vegada. El català és el valor per defecte SENSE dependre del
+     script: si no ho fos, es veurien els dos idiomes alhora fins que corregués. */
+  .es { display: none; }
+  [data-idioma="es"] .es { display: revert; }
+  [data-idioma="es"] .ca { display: none; }
+
+  /* ---------- Portada ---------- */
+
+  .portada {
+    border-bottom: 1px solid var(--linia);
+    background: var(--paper-2);
+  }
+  .portada-cos {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 3.6rem) clamp(1.25rem, 4vw, 3rem) clamp(2rem, 5vw, 3.5rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+  @media (max-width: 860px) {
+    .portada-cos { grid-template-columns: 1fr; }
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blau);
+    margin: 0 0 1.1rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.1rem, 5.2vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: var(--tinta);
+    margin: 0 0 1.2rem;
+    text-wrap: balance;
+  }
+  h1 em { font-style: italic; color: var(--blau); }
+
+  .entradeta {
+    font-size: clamp(1.02rem, 2vw, 1.16rem);
+    max-width: 34em;
+    margin: 0 0 1.6rem;
+  }
+
+  .dades-clau {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.6rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+  }
+  .dades-clau li { padding: 0.15rem 0; }
+  .dades-clau b { color: var(--tinta); font-weight: 600; }
+
+  /* ---------- Maqueta del dashboard ---------- */
+
+  .maqueta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-width: 340px;
+    width: 100%;
+    margin-inline: auto;
+  }
+  .maqueta-etiqueta {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    text-align: center;
+    margin: 0;
+  }
+  .mq-card {
+    background: #1976D2;
+    border-radius: 18px;
+    padding: 1.15rem 1.3rem 1.3rem;
+    color: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    .mq-card { background: #00325B; }
+  }
+  :root[data-theme="dark"] .mq-card { background: #00325B; }
+  :root[data-theme="light"] .mq-card { background: #1976D2; }
+
+  .mq-mes { font-size: 0.78rem; letter-spacing: 0.06em; opacity: 0.92; }
+  .mq-xifra {
+    font-family: var(--serif);
+    font-size: 2.1rem;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+    margin: 0.15rem 0 0.3rem;
+  }
+  .mq-detall { font-size: 0.8rem; opacity: 0.9; }
+
+  .mq-fila { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .mq-mini {
+    background: var(--paper);
+    border: 1px solid var(--linia-suau);
+    border-radius: 14px;
+    padding: 0.75rem 0.85rem;
+  }
+  .mq-mini span { display: block; font-size: 0.72rem; }
+  .mq-mini strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.12rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--tinta);
+    margin-top: 0.1rem;
+  }
+  .mq-mini.deute strong { color: var(--error); }
+
+  /* ---------- Estructura general ---------- */
+
+  .lloc {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 3rem);
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 3.5rem);
+    align-items: start;
+  }
+  @media (max-width: 940px) {
+    .lloc { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  .rail {
+    position: sticky;
+    top: 0;
+    padding: 2.6rem 0;
+    font-size: 0.86rem;
+  }
+  @media (max-width: 940px) {
+    .rail {
+      position: static;
+      padding: 1.6rem 0 0.5rem;
+      border-bottom: 1px solid var(--linia-suau);
+    }
+  }
+  .rail-titol {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 0.7rem;
+  }
+  .rail ol {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.32rem;
+  }
+  @media (max-width: 940px) {
+    .rail ol { flex-flow: row wrap; gap: 0.3rem 1rem; }
+  }
+  .rail a {
+    color: var(--tinta-suau);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .rail a:hover { color: var(--blau); border-bottom-color: var(--blau); }
+  .rail a:focus-visible { outline: 2px solid var(--blau); outline-offset: 3px; border-radius: 2px; }
+
+  main { padding: 1rem 0 4rem; }
+
+  .bloc { padding: 2.4rem 0 0.6rem; }
+  .bloc + .bloc { border-top: 1px solid var(--linia-suau); margin-top: 2rem; }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.55rem, 3.4vw, 2.05rem);
+    line-height: 1.15;
+    color: var(--tinta);
+    margin: 0 0 0.3rem;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .bloc-intro { max-width: 60ch; margin: 0 0 2rem; }
+
+  /* ---------- Fitxa de funcionalitat ---------- */
+
+  .fitxa {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 0 2.2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--linia-suau);
+  }
+  .fitxa:first-of-type { border-top: none; padding-top: 0.4rem; }
+  @media (max-width: 780px) {
+    .fitxa { grid-template-columns: 1fr; }
+  }
+
+  h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.14rem;
+    color: var(--tinta);
+    margin: 0 0 0.15rem;
+    letter-spacing: -0.005em;
+  }
+  .fitxa-cos { min-width: 0; max-width: 62ch; }
+  .fitxa-cos p { margin: 0.5rem 0; }
+  .fitxa-cos > p:first-of-type { margin-top: 0.35rem; }
+
+  .cami {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    background: var(--paper-3);
+    border: 1px solid var(--linia-suau);
+    color: var(--tinta);
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    margin-top: 0.55rem;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  ul.punts { margin: 0.6rem 0 0; padding-left: 1.15rem; }
+  ul.punts li { margin: 0.28rem 0; }
+
+  /* Nota al marge: les decisions que no són evidents, com una
+     anotació a mà al costat d'un albarà. */
+  .marge {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    border-left: 2px solid var(--blau);
+    padding: 0.1rem 0 0.1rem 0.85rem;
+    align-self: start;
+    margin-top: 1.9rem;
+  }
+  @media (max-width: 780px) {
+    .marge {
+      margin: 1rem 0 0;
+      background: var(--paper-2);
+      padding: 0.7rem 0.85rem;
+      border-radius: 0 8px 8px 0;
+    }
+  }
+  .marge-titol {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--blau);
+    margin-bottom: 0.3rem;
+  }
+
+  /* ---------- Taules ---------- */
+
+  .taula-fora { overflow-x: auto; margin: 1.2rem 0 0.4rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 0.9rem; }
+  th, td {
+    text-align: left;
+    padding: 0.55rem 0.9rem 0.55rem 0;
+    border-bottom: 1px solid var(--linia-suau);
+    vertical-align: top;
+  }
+  th {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-bottom-color: var(--linia);
+  }
+  td.num { font-variant-numeric: tabular-nums; }
+
+  /* ---------- Detalls ---------- */
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.86em;
+    background: var(--paper-3);
+    padding: 0.08em 0.32em;
+    border-radius: 4px;
+  }
+  strong { color: var(--tinta); font-weight: 600; }
+  a { color: var(--blau); }
+
+  .fita {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.16rem 0.45rem;
+    border-radius: 4px;
+    border: 1px solid currentColor;
+    margin-left: 0.4rem;
+    vertical-align: 0.12em;
+  }
+  .fita.ia { color: var(--blau); }
+  .fita.local { color: var(--ok); }
+
+  .peu {
+    border-top: 1px solid var(--linia);
+    background: var(--paper-2);
+    margin-top: 1rem;
+  }
+  .peu-cos {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 2.2rem clamp(1.25rem, 4vw, 3rem) 3rem;
+    font-size: 0.88rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .peu-cos p { margin: 0; max-width: 68ch; }
+
+
+  /* ---------- Captures de pantalla ---------- */
+  .pantalla { margin: 1.15rem 0 0.2rem; max-width: 252px; }
+  .pantalla img {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid var(--linia);
+    background: var(--paper-3);
+  }
+  .pantalla figcaption {
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-top: 0.45rem;
+    line-height: 1.4;
+  }
+  /* La de la portada va més gran: és la primera cosa que es veu */
+  .pantalla-portada { max-width: 300px; margin: 0 auto; }
+  .pantalla-portada figcaption { text-align: center; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+
+  .torna-web {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin: 18px 0 0 20px; padding: 7px 14px;
+    border: 1px solid var(--linia); border-radius: 999px;
+    font-family: var(--sans); font-size: 14px; font-weight: 600;
+    color: var(--blau); background: var(--paper-2); text-decoration: none;
+  }
+  .torna-web:hover { border-color: var(--blau); }
+  @media print { .torna-web { display: none; } }
