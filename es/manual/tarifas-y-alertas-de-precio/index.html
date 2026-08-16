@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifas de proveedor y alertas de precio | Factures amb Ordre</title>
+<meta name="description" content="Importa la tarifa pactada de cada proveedor y recibe un aviso cuando alguien te cobre por encima de lo acordado.">
+<link rel="canonical" href="https://facturesambordre.es/es/manual/tarifas-y-alertas-de-precio/">
+<!--
+  Aqui SI que hi ha hreflang: aquesta pagina existeix en catala i en castella.
+  Les pagines del manual que encara no s'han passat al castella no en porten.
+-->
+<link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/tarifas-y-alertas-de-precio/">
+<link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/tarifes-i-alertes-de-preu/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A3F37">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://facturesambordre.es/es/manual/tarifas-y-alertas-de-precio/">
+<meta property="og:title" content="Tarifas de proveedor y alertas de precio">
+<meta property="og:description" content="Importa la tarifa pactada de cada proveedor y recibe un aviso cuando alguien te cobre por encima de lo acordado.">
+<meta property="og:image" content="https://facturesambordre.es/og-image.png">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/manual.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/es/">
+      <svg class="brand-mark" viewBox="0 0 222 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#137A69"/>
+            <stop offset="100%" stop-color="#0A3F37"/>
+          </linearGradient>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F6D073"/>
+            <stop offset="100%" stop-color="#D9A441"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="222" height="222" rx="50" fill="url(#bgGrad)"/>
+        <rect x="52" y="54" width="86" height="114" rx="10" fill="#FFFFFF"/>
+        <line x1="64" y1="74" x2="114" y2="74" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="88" x2="114" y2="88" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <line x1="64" y1="102" x2="100" y2="102" stroke="#CFE0DC" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="142" r="31" fill="#0F5E52" stroke="url(#goldGrad)" stroke-width="7"/>
+        <text x="132" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#F6D073">€</text>
+        <line x1="155" y1="165" x2="174" y2="184" stroke="url(#goldGrad)" stroke-width="8.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Factures amb Ordre</span>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="/es/manual/">Índice del manual</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap manual-pagina">
+  <nav class="engrunes" aria-label="Miga de pan">
+    <a href="/es/">Inicio</a> › <a href="/es/manual/">Manual</a> › <span>Tarifas de proveedor y alertas de precio</span>
+  </nav>
+
+  <h1>Tarifas de proveedor y alertas de precio</h1>
+  <p class="lead">Importa la tarifa pactada de cada proveedor y recibe un aviso cuando alguien te cobre por encima de lo acordado.</p>
+
+  <section class="bloc">
+<article class="fitxa">
+        <div class="fitxa-cos">
+          
+          <h3 class="es">Importar la tarifa del proveedor</h3>
+          
+          <div class="es">
+            <p>
+              La lista de precios pactados entra tal como te la envían: <strong>PDF, foto,
+              hoja de cálculo Excel o CSV</strong>. Antes de guardar nada se muestra qué se ha
+              leído y cuántos precios, para que lo valides.
+            </p>
+            <p>
+              El Excel no tiene que ser una tabla limpia de dos columnas: si es un informe de
+              consumo con diez columnas y sin cabecera, la app deduce cuál es el nombre y cuál
+              el precio.
+            </p>
+          </div>
+          <p class="cami"><span class="es">Proveedor → ⋮ → Importar tarifa</span></p>
+          <figure class="pantalla"><img src="/manual-img/manual-07.webp" loading="lazy" decoding="async" alt="La tarifa de un proveedor: precio pactado y último precio pagado" ><figcaption><span class="es">La tarifa de un proveedor: precio pactado y último precio pagado</span></figcaption></figure>
+        </div>
+        
+        <aside class="marge es">
+          <span class="marge-titol">Nada se importa a ciegas</span>
+          Ciento cincuenta precios mal leídos en silencio ensuciarían el catálogo y harían
+          mentir todas las alertas. Por eso siempre hay un paso de revisión.
+        </aside>
+      </article>
+
+      
+<article class="fitxa">
+        <div class="fitxa-cos">
+          <h3>Alerta de precio</h3>
+          <div>
+            <p>
+              Al escanear, cada línea se compara con el <strong>precio pactado</strong> que
+              tienes apuntado de ese proveedor. Si te lo cobran por encima, el aviso sale
+              <strong>en el momento</strong>, no a final de mes cuando ya lo has pagado.
+            </p>
+          </div>
+        </div>
+      </article>
+  </section>
+
+  <nav class="manual-nav">
+    <a class="manual-nav-anterior" href="/es/manual/reclamar-abonos-proveedores/">← Cómo reclamar abonos pendientes a tus proveedores</a>
+    <a class="manual-nav-index" href="/es/manual/">Índice del manual</a>
+    <a class="manual-nav-seguent" href="/es/manual/comparar-precios-proveedores/">Comparar precios entre proveedores →</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Factures amb Ordre</span>
+    <span class="footer-links">
+      <a href="/es/">Inicio</a>
+      <a href="/es/manual/">Manual</a>
+      <a href="/legal.html">Aviso legal</a>
+      <a href="mailto:info@facturesambordre.es">info@facturesambordre.es</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  L'arrel (/) no hi es a posta: es una redireccio per idioma amb noindex.
-  manual.html tampoc: te noindex des que el seu text catala viu partit a
-  /ca/manual/. Hi tornara quan existeixi /es/manual/ i es pugui redirigir.
+  L'arrel (/) no hi es: es una redireccio per idioma amb noindex.
+  manual.html tampoc: te noindex mentre nomes hi hagi 5 de les 11 seccions
+  castellanes passades a pagina propia.
+  Els hreflang nomes hi son a les parelles que existeixen de deb0 als dos idiomes.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -50,12 +51,24 @@
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/escanejar-albarans-factures/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/escanejar-albarans-factures/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/escanear-albaranes-facturas/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -74,24 +87,32 @@
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/reclamar-abonaments-proveidors/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/reclamar-abonaments-proveidors/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/reclamar-abonos-proveedores/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/tarifes-i-alertes-de-preu/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/tarifes-i-alertes-de-preu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/tarifas-y-alertas-de-precio/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/comparar-preus-proveidors/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/comparar-preus-proveidors/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/comparar-precios-proveedores/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/conciliar-albarans-factura/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/conciliar-albarans-factura/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/conciliar-albaranes-factura/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -116,6 +137,46 @@
   </url>
   <url>
     <loc>https://facturesambordre.es/ca/manual/com-funciona-per-dins/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/escanear-albaranes-facturas/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/escanejar-albarans-factures/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/escanear-albaranes-facturas/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/reclamar-abonos-proveedores/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/reclamar-abonaments-proveidors/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/reclamar-abonos-proveedores/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/tarifas-y-alertas-de-precio/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/tarifes-i-alertes-de-preu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/tarifas-y-alertas-de-precio/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/comparar-precios-proveedores/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/comparar-preus-proveidors/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/comparar-precios-proveedores/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://facturesambordre.es/es/manual/conciliar-albaranes-factura/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://facturesambordre.es/ca/manual/conciliar-albarans-factura/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facturesambordre.es/es/manual/conciliar-albaranes-factura/"/>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
