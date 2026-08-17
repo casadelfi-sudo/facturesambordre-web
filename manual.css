@@ -488,3 +488,31 @@
   }
   .torna-web:hover { border-color: var(--blau); }
   @media print { .torna-web { display: none; } }
+
+  /* ---------- El manual dins del lloc web ---------- */
+  /* Nomes en fosc. No hi ha bessona `:root[data-theme="dark"]` com a la resta del
+     fitxer perque aquestes peces (capcalera, engrunes, index, navegacio) nomes
+     surten a les pagines partides del manual, i aquelles no tenen interruptor
+     d'aparenca: segueixen el sistema i prou. */
+  @media (prefers-color-scheme: dark) {
+    .site-header { background: var(--paper-2); border-bottom-color: var(--linia); }
+    .brand-name { color: var(--tinta); }
+    .btn-ghost { color: var(--blau); border-color: var(--blau); }
+    .btn-ghost:hover { background: rgba(165, 200, 255, 0.12); }
+
+    .engrunes { color: var(--tinta-suau); }
+    .engrunes a { color: var(--blau); }
+
+    /* L'entradeta de sota el titol i la descripcio de cada fitxa de l'index:
+       style.css les posa en gris de text sobre paper blanc. */
+    .manual-pagina > .lead,
+    .manual-index li span { color: var(--tinta-suau); }
+
+    /* La targeta de l'index. El titol es queda amb el color de `strong`, que ja
+       es el del text: en clar tampoc no va pintat de color d'enllac. */
+    .manual-index li { background: var(--paper-2); border-color: var(--linia); }
+    .manual-index li a { color: var(--blau); }
+
+    .manual-nav { border-top-color: var(--linia); }
+    .manual-nav a { color: var(--blau); }
+  }
