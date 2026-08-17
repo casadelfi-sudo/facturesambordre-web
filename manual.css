@@ -9,15 +9,15 @@
      el manual és del mateix món visual que el producte.
      ============================================================ */
   :root {
-    --blau:        #1976D2;
-    --blau-fosc:   #0B4C8C;
-    --tinta:       #001C39;
-    --tinta-suau:  #43474E;
-    --paper:       #FCFCFF;
-    --paper-2:     #F2F3F9;
-    --paper-3:     #ECEEF4;
-    --linia:       #C3C7CF;
-    --linia-suau:  #DFE2EB;
+    --blau:        #137A69;
+    --blau-fosc:   #0A3F37;
+    --tinta:       #1B2739;
+    --tinta-suau:  #5A6472;
+    --paper:       #FAF9F6;
+    --paper-2:     #FFFFFF;
+    --paper-3:     #F1EFE9;
+    --linia:       #E7E4DD;
+    --linia-suau:  #EFEDE7;
 
     /* Semàntics: independents de l'accent */
     --ok:          #2E7D32;
@@ -29,23 +29,6 @@
     --mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Consolas, monospace;
 
     --max: 1180px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --blau:       #A5C8FF;
-      --blau-fosc:  #D4E3FF;
-      --tinta:      #E3E2E6;
-      --tinta-suau: #C3C7CF;
-      --paper:      #1A1C1E;
-      --paper-2:    #212429;
-      --paper-3:    #282C31;
-      --linia:      #43474E;
-      --linia-suau: #35393E;
-      --ok:         #7FD68A;
-      --avis:       #F2BE6A;
-      --error:      #FFB4AB;
-    }
   }
 
   :root[data-theme="dark"] {
@@ -64,15 +47,15 @@
   }
 
   :root[data-theme="light"] {
-    --blau:       #1976D2;
-    --blau-fosc:  #0B4C8C;
-    --tinta:      #001C39;
-    --tinta-suau: #43474E;
-    --paper:      #FCFCFF;
-    --paper-2:    #F2F3F9;
-    --paper-3:    #ECEEF4;
-    --linia:      #C3C7CF;
-    --linia-suau: #DFE2EB;
+    --blau:       #137A69;
+    --blau-fosc:  #0A3F37;
+    --tinta:      #1B2739;
+    --tinta-suau: #5A6472;
+    --paper:      #FAF9F6;
+    --paper-2:    #FFFFFF;
+    --paper-3:    #F1EFE9;
+    --linia:      #E7E4DD;
+    --linia-suau: #EFEDE7;
     --ok:         #2E7D32;
     --avis:       #8B5000;
     --error:      #BA1A1A;
@@ -205,16 +188,13 @@
     margin: 0;
   }
   .mq-card {
-    background: #1976D2;
+    background: #137A69;
     border-radius: 18px;
     padding: 1.15rem 1.3rem 1.3rem;
     color: #fff;
   }
-  @media (prefers-color-scheme: dark) {
-    .mq-card { background: #00325B; }
-  }
-  :root[data-theme="dark"] .mq-card { background: #00325B; }
-  :root[data-theme="light"] .mq-card { background: #1976D2; }
+  :root[data-theme="dark"] .mq-card { background: #06322B; }
+  :root[data-theme="light"] .mq-card { background: #137A69; }
 
   .mq-mes { font-size: 0.78rem; letter-spacing: 0.06em; opacity: 0.92; }
   .mq-xifra {
@@ -488,31 +468,3 @@
   }
   .torna-web:hover { border-color: var(--blau); }
   @media print { .torna-web { display: none; } }
-
-  /* ---------- El manual dins del lloc web ---------- */
-  /* Nomes en fosc. No hi ha bessona `:root[data-theme="dark"]` com a la resta del
-     fitxer perque aquestes peces (capcalera, engrunes, index, navegacio) nomes
-     surten a les pagines partides del manual, i aquelles no tenen interruptor
-     d'aparenca: segueixen el sistema i prou. */
-  @media (prefers-color-scheme: dark) {
-    .site-header { background: var(--paper-2); border-bottom-color: var(--linia); }
-    .brand-name { color: var(--tinta); }
-    .btn-ghost { color: var(--blau); border-color: var(--blau); }
-    .btn-ghost:hover { background: rgba(165, 200, 255, 0.12); }
-
-    .engrunes { color: var(--tinta-suau); }
-    .engrunes a { color: var(--blau); }
-
-    /* L'entradeta de sota el titol i la descripcio de cada fitxa de l'index:
-       style.css les posa en gris de text sobre paper blanc. */
-    .manual-pagina > .lead,
-    .manual-index li span { color: var(--tinta-suau); }
-
-    /* La targeta de l'index. El titol es queda amb el color de `strong`, que ja
-       es el del text: en clar tampoc no va pintat de color d'enllac. */
-    .manual-index li { background: var(--paper-2); border-color: var(--linia); }
-    .manual-index li a { color: var(--blau); }
-
-    .manual-nav { border-top-color: var(--linia); }
-    .manual-nav a { color: var(--blau); }
-  }
