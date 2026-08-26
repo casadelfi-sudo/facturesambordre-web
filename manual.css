@@ -437,6 +437,11 @@
   .pantalla { margin: 1.15rem 0 0.2rem; max-width: 252px; }
   .pantalla img {
     width: 100%;
+    /* Va de bracet amb els width/height del HTML: aquells diuen la proporció
+       perquè el navegador reservi l'espai abans de tenir la imatge (amb
+       loading="lazy" el text saltava quan arribava), i aquest deixa que
+       l'alçada la calculi ell. Sense l'auto, sortiria estirada a 956 px. */
+    height: auto;
     display: block;
     border-radius: 14px;
     border: 1px solid var(--linia);
