@@ -1,3 +1,21 @@
+/*
+  ⚠️ LES PAGINES L'ENLLACEN AMB UNA VERSIO: /style.css?v=2026-08-26
+
+  Si es canvia una regla d'aqui que nomes funciona amb un HTML nou (o al
+  reves), S'HA DE PUJAR AQUELL NUMERO a les 32 pagines que l'enllacen:
+    grep -rl 'style.css?v=' --include=*.html . | xargs sed -i \
+      's|style.css?v=[0-9-]*|style.css?v=LA-DATA-D-AVUI|g'
+
+  El perque i l'historia, explicats a dalt de manual.css: GitHub Pages
+  serveix amb Cache-Control max-age=600, o sigui que durant deu minuts un
+  visitant pot tenir el CSS vell i el HTML nou alhora. Aqui la parella
+  delicada es .shot img (height:auto) amb els width/height que les captures
+  de la portada declaren al HTML.
+
+  Ull: el legal.html l'enllaca en RELATIU (style.css?v=...), sense barra
+  davant, perque es a l'arrel. Compta igual per al recompte.
+*/
+
 :root {
   --green-dark: #0A3F37;
   --green: #137A69;

@@ -2,6 +2,20 @@
   Estils del manual. Sortien de dins del manual.html d'una sola peca:
   amb 11 pagines, tenir-los en un fitxer vol dir que el navegador se'ls
   guarda un cop i no els torna a baixar a cada pagina.
+
+  ⚠️ LES PAGINES L'ENLLACEN AMB UNA VERSIO: /manual.css?v=2026-08-26
+
+  Si es canvia una regla d'aqui que nomes funciona amb un HTML nou (o al
+  reves), S'HA DE PUJAR AQUELL NUMERO a les 24 pagines que l'enllacen:
+    grep -rl 'manual.css?v=' --include=*.html . | xargs sed -i \
+      's|manual.css?v=[0-9-]*|manual.css?v=LA-DATA-D-AVUI|g'
+
+  El perque: GitHub Pages serveix els fitxers amb Cache-Control max-age=600,
+  o sigui que durant deu minuts un visitant pot tenir el CSS vell i el HTML
+  nou alhora. Va passar el 26/08/2026: el HTML ja duia width/height a les
+  captures pero el CSS encara no duia el height:auto que els acompanya, i
+  les imatges sortien estirades a 252x956. Amb la versio a l'enllac, els
+  dos fitxers viatgen sempre aparellats i aquella finestra no existeix.
 */
 
   /* ============================================================
