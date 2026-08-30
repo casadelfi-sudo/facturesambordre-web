@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /penya/
 
 Sitemap: https://facturesambordre.es/sitemap.xml
